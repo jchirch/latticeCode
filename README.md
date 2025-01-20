@@ -5,7 +5,7 @@ Learning a new programming language or framework can be a daunting task. Lattice
 
 Lattice Code draws meaningful parallels between your current proficiencies and your goals. Whether you're transitioning to a new tech stack on the job or starting from scratch, Lattice Code ensures that your journey is as efficient and relatable as possible. Learning is a personal journey, let Lattice be your plus 1.
 
-*Note: All AI is experiementally generated and may contain inaccuracies. Always double check important information.*
+*Note: All AI is experiementally generated and may contain inaccuracies. Always double check important information.* 
 
 ## Installation
 
