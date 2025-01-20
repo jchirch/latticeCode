@@ -1,14 +1,29 @@
 'use client';
 
-import './plasma.css'; // Import the styles
+// import './plasma.css'; // Import the styles
 
-export default function PlasmaBackgroundPage() {
+export default function loginPage() {
   return (
-    <div className="wrapper">
-      <div className="login-container">
+    <div className="pageWrapper 
+    bg-cover
+    w-screen 
+    h-screen 
+    flex 
+    items-center 
+    justify-center"
+    style={{ backgroundImage: "url('/latticebg.jpg')"}}>
+      <div className="loginContainer
+
+        bg-black
+        pt-[4%]
+        pb-[4%]
+        pl-[2%]
+        pr-[2%]
+        text-center">
+
         <h1 className="text-white">Welcome Back</h1>
-        <form className="login-form">
-          <div className="form-group">
+        <form className="loginForm">
+          <div className="formGroup">
             <label htmlFor="email" className="text-white">Email</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required />
           </div>
