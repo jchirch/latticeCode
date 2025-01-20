@@ -1,17 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lattice Code
+
+## Summary
+Learning a new programming language or framework can be a daunting task. Lattice Code aims to make the process easier and more intuitive. By leveraging your existing knowledge and combining it with the power of OpenAI API, Lattice Code generates a custom, personalized curriculumn specifically for you. 
+
+Lattice Code draws meaningful parallels between your current proficiencies and your goals. Whether you're transitioning to a new tech stack on the job or starting from scratch, Lattice Code ensures that your journey is as efficient and relatable as possible. Learning is a personal journey, let Lattice be your plus 1.
+
+*Note: All AI is experiementally generated and may contain inaccuracies. Always double check important information.*
+
+## Installation
+
+## Preview
+
+## Testing
+
+## Technology Used
+  - Node v20.14.0
 
 ## Getting Started
+
+Fork and clone [companion API](https://github.com/jchirch/lattice_code_api)
+bundle install
+rails server, ensure runs on localhost3000
 
 First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -20,7 +35,15 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Contributors
+
+**Project Lead: Joe Chirchirillo**
+  - [LinkedIn](https://www.linkedin.com/in/joechirchirillo/)
+  - [Github](https://github.com/jchirch)
+
+
+
+## Research Later
 
 To learn more about Next.js, take a look at the following resources:
 
