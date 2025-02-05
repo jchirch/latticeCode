@@ -1,12 +1,17 @@
 'use client';
 
-// import './plasma.css'; // Import the styles
+import { useRouter } from "next/navigation";
 
 export default function loginPage() {
+  const router = useRouter()
+  const navigateNewAccount = () => {
+    router.push("/newaccount")
+  }
   return (
     <div
-      className="pageWrapper bg-cover w-screen h-screen flex flex-col items-center justify-center"
-      style={{ backgroundImage: "url('/latticebg.jpg')" }}
+      className=" 
+      w-screen h-screen flex flex-col items-center justify-center
+      bg-[linear-gradient(45deg,_hsl(177,100%,50%)_0%,_hsl(177,99%,45%)_16%,_hsl(177,99%,39%)_25%,_hsl(177,99%,32%)_34%,_hsl(177,99%,22%)_48%,_hsl(0,0%,0%)_98%)]"
     >
       <h1 className="text-white font-extrabold text-4xl p-5 mb-10 hover:scale-150 duration-500">Lattice Code</h1>
 
@@ -26,7 +31,7 @@ export default function loginPage() {
               name="email"
               placeholder="Enter your email"
               required
-              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-400"
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-400 text-black"
             />
           </div>
           <div className="form-group">
@@ -39,7 +44,7 @@ export default function loginPage() {
               name="password"
               placeholder="Enter your password"
               required
-              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-400"
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-400 text-black"
             />
           </div>
           <button
@@ -48,15 +53,21 @@ export default function loginPage() {
           >
             Log In
           </button>
+          </form>
           <h3 className="text-white text-2xl font-bold mb-4">or</h3>
           <button
             type="submit"
+            onClick={navigateNewAccount}
             className="w-full bg-teal-500 text-white font-semibold py-2 rounded hover:bg-red-600 transition"
           >
             Create New Account
           </button>
-        </form>
       </div>
     </div>
   );
 }
+
+
+// teal to black bg gradient
+// /* <div class="bg-gradient-to-br from-teal-400 via-teal-600 to-black"></div>
+// <div class="bg-[linear-gradient(45deg,_hsl(177,100%,50%)_0%,_hsl(177,99%,45%)_16%,_hsl(177,99%,39%)_25%,_hsl(177,99%,32%)_34%,_hsl(177,99%,22%)_48%,_hsl(0,0%,0%)_98%)]"></div> */
