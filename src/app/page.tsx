@@ -1,12 +1,23 @@
 'use client';
 
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"
+import { useState } from "react"
 
 export default function loginPage() {
-  const router = useRouter()
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    console.log("Logging in with:", { email, password });
+    router.push("/dashboard")
+  }
+
   const navigateNewAccount = () => {
     router.push("/newaccount")
   }
+
   return (
     <div
       className=" 
@@ -20,7 +31,7 @@ export default function loginPage() {
         className="loginContainer bg-black  w-[30%] pt-8 pb-8 px-5 text-center rounded-lg shadow-none transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-teal-300"
       >
         <h2 className="text-white text-2xl font-bold mb-4  hover:text-teal-400 transition">Welcome Back</h2>
-        <form className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div className="form-group">
             <label htmlFor="email" className="block text-left text-white font-medium">
               Email
@@ -29,7 +40,9 @@ export default function loginPage() {
               type="email"
               id="email"
               name="email"
+              value={email}
               placeholder="Enter your email"
+              onChange={(e) => setEmail(e.target.value)}
               required
               className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-400 text-black"
             />
@@ -44,6 +57,8 @@ export default function loginPage() {
               name="password"
               placeholder="Enter your password"
               required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-400 text-black"
             />
           </div>
