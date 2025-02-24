@@ -24,13 +24,12 @@ export default function loginPage() {
       w-screen h-screen flex flex-col items-center justify-center
       bg-[linear-gradient(45deg,_hsl(177,100%,50%)_0%,_hsl(177,99%,45%)_16%,_hsl(177,99%,39%)_25%,_hsl(177,99%,32%)_34%,_hsl(177,99%,22%)_48%,_hsl(0,0%,0%)_98%)]"
     >
-      <h1 className="text-white font-extrabold text-4xl p-5 mb-10 hover:scale-150 duration-500">Lattice Code</h1>
-
-      <h1 className="text-white font-playwrite text-4xl p-5 mb-10 hover:scale-125 duration-300">Your learning should be as unique as you.</h1>
+      <h1 className="text-white font-playwrite text-8xl p-5 mb-10 ">Lattice Code</h1> {/* hover:scale-150 duration-500 */}
+      <h1 className="text-white font-playwrite text-4xl p-5 mb-10 ">Your learning should be as unique as you.</h1> {/* hover:scale-125 duration-300 */}
       <div
         className="loginContainer bg-black  w-[30%] pt-8 pb-8 px-5 text-center rounded-lg shadow-none transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-teal-300"
       >
-        <h2 className="text-white text-2xl font-bold mb-4  hover:text-teal-400 transition">Welcome Back</h2>
+        <h2 className="text-white text-2xl font-bold mb-4 ">Welcome Back</h2> {/* hover:text-teal-400 transition */}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="form-group">
             <label htmlFor="email" className="block text-left text-white font-medium">
@@ -69,7 +68,7 @@ export default function loginPage() {
             Log In
           </button>
           </form>
-          <h3 className="text-white text-2xl font-bold mb-4">or</h3>
+          <h3 className="text-white text-2xl font-bold mb-4 mt-3">or</h3>
           <button
             type="submit"
             onClick={navigateNewAccount}
