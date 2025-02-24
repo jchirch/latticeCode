@@ -26,7 +26,7 @@ export default function loginPage() {
     >
       <h1 className="text-white font-extrabold text-4xl p-5 mb-10 hover:scale-150 duration-500">Lattice Code</h1>
 
-      <h1 className="text-white font-extrabold text-4xl p-5 mb-10 hover:scale-125 duration-300">Your learning should be as unique as you are.</h1>
+      <h1 className="text-white font-playwrite text-4xl p-5 mb-10 hover:scale-125 duration-300">Your learning should be as unique as you.</h1>
       <div
         className="loginContainer bg-black  w-[30%] pt-8 pb-8 px-5 text-center rounded-lg shadow-none transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-teal-300"
       >
