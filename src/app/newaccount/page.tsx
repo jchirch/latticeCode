@@ -28,12 +28,12 @@ export default function NewAccountPage() {
       w-screen h-screen 
       bg-[linear-gradient(45deg,_hsl(177,100%,50%)_0%,_hsl(177,99%,45%)_16%,_hsl(177,99%,39%)_25%,_hsl(177,99%,32%)_34%,_hsl(177,99%,22%)_48%,_hsl(0,0%,0%)_98%)]"
     >
-      <div className="leftPage w-1/2 flex justify-start items-center outline-dashed">
-        <h1 className="text-white font-playwrite text-8xl p-5 mb-10 ">Lattice Code</h1> {/* hover:scale-150 duration-500 */}
+      <div className="leftPage w-1/2 flex justify-start items-center">
+        <h1 className="text-white font-playwrite text-8xl pl-12 mb-10 ">Lattice Code</h1> {/* hover:scale-150 duration-500 */}
       </div>
-      <div className="rightPage w-1/2 align-middle items-center outline-dashed">
+      <div className="rightPage w-1/2 flex justify-center items-center">
         <div
-          className="loginContainer bg-black w-[30%] pt-8 pb-8 px-5 text-center rounded-lg shadow-none transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-teal-300"
+          className="loginContainer bg-black w-[60%] pt-8 pb-8 px-5 text-center rounded-lg shadow-none transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-teal-300"
         >
           <h1 className="text-white font-playwrite text-4xl p-5 mb-10 ">Create your account</h1>
           <form onSubmit={handleSubmit} className="">
@@ -98,11 +98,10 @@ export default function NewAccountPage() {
 
             <button
             type="submit"
-            className="w-full bg-teal-500 text-white font-semibold py-2 rounded hover:bg-red-600 transition"
+            className="w-full mt-3 bg-teal-500 text-white font-semibold py-2 rounded hover:bg-red-600 transition"
           >
             Create Account
           </button>
-
           </form>
         </div>
       </div>
