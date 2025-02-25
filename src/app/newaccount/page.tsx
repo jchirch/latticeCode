@@ -10,15 +10,39 @@ export default function NewAccountPage() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    console.log("Logging in with:", { email, password });
-    router.push("/dashboard")
-  }
 
-  // const navigateDashboard = () => {
-  //   router.push("/dashboard")
-  // }
+    const newUser = {
+      firstname: firstName,
+      lastname: lastName,
+      email: email,
+      password: password,
+    };
+
+    try {
+      const response = await fetch("http://localhost:3000/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newUser),
+      });
+  
+      if (!response.ok) {
+        throw new Error("Failed to create account");
+      }
+  
+      const data = await response.json();
+      console.log("Account created successfully:", data);
+  
+      console.log("Creating new user with:", { firstName, lastName, email, password });
+      router.push("/dashboard")
+    
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
 
   return (
     <div
@@ -95,7 +119,6 @@ export default function NewAccountPage() {
                 className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-400 text-black"
               />
             </div>
-
             <button
             type="submit"
             className="w-full mt-3 bg-teal-500 text-white font-semibold py-2 rounded hover:bg-red-600 transition"
