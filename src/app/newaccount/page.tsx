@@ -21,7 +21,7 @@ export default function NewAccountPage() {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/users", {
+      const response = await fetch("http://localhost:3000/api/v1/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
